@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: STUDENT-VIEW-SERVICE
+    
+  config:
+    import: configserver:http://${host}:${port}
+  
+logging:
+  level:
+    root: info
+    com: info
+    

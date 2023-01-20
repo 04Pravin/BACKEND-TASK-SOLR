@@ -1,0 +1,15 @@
+spring:   
+  application:
+    name: STUDENT-SERVICE
+server:
+  port: 8080
+    
+logging:
+  level:
+    root: info
+    com: info
+    
+  
+solr:
+  url: http://localhost:8983/solr/student 
+    

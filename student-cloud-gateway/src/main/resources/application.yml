@@ -1,0 +1,27 @@
+server:
+  port: ${serverport}
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://${name}:${portnum}
+      
+#add routing for the services - declarative
+#each route has id, uri and predicate
+
+spring:
+  application:
+    name: GATEWAY
+     
+  config:
+    import: configserver:http://localhost:8888   
+ 
+#  cloud:
+#    gateway:
+#      routes: 
+#      - id: studentappViewService
+#        uri: lb://STUDENT-VIEW-SERVICE
+#        predicates:
+#        - Path=/studentview-api/**
+
+          
